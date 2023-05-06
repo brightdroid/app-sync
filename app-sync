@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BASEDIR=$(realpath $(dirname $0))
+BASEDIR=$(dirname $(realpath $0))
+
 
 ### usage
 function usage
@@ -35,7 +36,7 @@ function error
 # $2: message
 function notify
 {
-    notify-send -a App-Sync -i "$BASEDIR/icon.png" -a "App-Sync" "$1" "$2"
+    notify-send -a App-Sync -i "${BASEDIR}/icon.png" -a "App-Sync" "$1" "$2"
 }
 
 
