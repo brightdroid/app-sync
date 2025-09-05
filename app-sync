@@ -80,6 +80,9 @@ while getopts "hd" o; do
 done
 shift $((OPTIND-1))
 
+# no programm or repo given
+[ $# -lt 2 ] && usage
+
 
 ### Program path correct?
 PROG=$1
