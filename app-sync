@@ -126,7 +126,7 @@ $PROG
 for r in ${REPOS[@]}
 do
     repo_cmd "$r" 'git add -A' 4
-    repo_cmd "$r" "echo 'Sync from $(hostname -s)' | git commit -F -" 4
+    repo_cmd "$r" "echo 'Sync from $(hostnamectl hostname)' | git commit -F -" 4
     repo_cmd "$r" 'git push' 4
 done
 
